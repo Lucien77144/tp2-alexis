@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+    color: white;
+}
+
+main{
+    display: grid;
+    grid-template-areas: "a b";
+    grid-template-columns: 0.4fr 0.6fr;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+}
+
+.content{
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.illustration{
+    grid-area: b;
+}
+
+.illustration img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.t-grey{
+    color: #C2C7DA;
+}
+
+.content{
+    background: #201B2D;
+}
+
+h1,h2{
+    font-weight: 900;
+    margin: 32px;
+}
+
+h1{
+    font-size: 0.875rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+.text-content p{
+    font-size: 1rem;
+    font-weight: 500;
+    border-left: 8px solid white;
+    padding-left: 16px;
+    margin: 32px;
+}
+
+.credits p{
+    font-weight: 500;
+    font-size: 0.75rem;
+    margin: 16px 32px 32px 32px;
+}
+
+.credits p:first-of-type{
+    margin-bottom: 0;
+}
+
+@media (max-width: 876px) {
+    main{
+        grid-template-areas: "a" "b";
+        grid-template-columns: auto;
+        height: 100vh;
+    }
+
+    section{
+        height: auto;
+    }
+
+    .content{
+        min-height: 50vh;
+    }
+
+    .illustration{
+        min-height: 100%;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    h2, .text-content p, h1{
+        margin: 24px;
+    }
+
+    .credits p{
+        font-weight: 500;
+        font-size: 0.75rem;
+        margin: 8px 24px 24px 24px;
+    }
+    
+    .credits p:first-of-type{
+        margin-bottom: 0;
+    }
+    
+}
